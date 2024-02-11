@@ -59,10 +59,8 @@ console.log("Agregar elementos al inicio del arreglo:", arreglo1);
 const arregloValues = arreglo2.values();
 console.log("Obtener iterador de valores del arreglo 2:", Array.from(arregloValues));
   
-  // Otras funciones mencionadas
 const arregloFindLastIndex = arreglo2.reduceRight((acc, val, index) => (val > 5 && acc === -1) ? index : acc, -1);
 console.log("Encontrar el índice del último elemento mayor a 5 en el arreglo 2:", arregloFindLastIndex);
-
 
 arreglo1.forEach((element, index) => {
   console.log(`Elemento en la posición ${index} del arreglo 1: ${element}`);
