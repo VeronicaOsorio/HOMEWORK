@@ -1,4 +1,4 @@
-//Esta es la actividad de arreglos
+//Esta es la actividad de arreglos.
 
 
 const arreglo1 = [0, 1, 2, 3];
