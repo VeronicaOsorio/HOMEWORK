@@ -12,5 +12,8 @@ desestructuración
 promesas
 async awaits
 selective structures
+null check ternary
+loops
+
 
 
