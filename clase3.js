@@ -30,3 +30,25 @@ const arrowFunction = (a, b) => {
 console.log (oldRegularFunction(2, 3))
 console.log( newRegularFunction(2,3))
 console.log(arrowFunction(2,3))
+
+//ejercicio
+
+const nuevaFuncion = function  (a) {
+    if (a % 2 == 0) {
+        return "true"
+    } else { return "false"}
+}
+
+console.log (nuevaFuncion(2))
+
+//puedo reemplazar una funcióon por una constante
+
+//Otra forma de escribir una función
+
+const funcionFlecha = (a) => {
+    if (a % 2 == 0) {
+        return "true"
+    } else { return "false"}
+}
+
+console.log(funcionFlecha(3))
