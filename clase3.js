@@ -52,3 +52,37 @@ const funcionFlecha = (a) => {
 }
 
 console.log(funcionFlecha(3))
+
+///
+
+/* 
+diferencias flecha y normal*/
+
+//IMPORTAR
+
+import {animals} from "./animals";
+console.log (animals)
+
+//animals.js
+
+/* 
+PROMMESA
+algo que se puede cumplir // es una premisa
+
+si la promesa se cumple tenemos un then
+si no se cumple es un catch
+
+*/
+
+//ESTO ES PARA CREAR LA PROMESA
+const promesa = new Promise ((resolve, reject) => {
+    //  TFOFO
+    resolve();
+    reject();
+
+
+})
+
+promesa.then((data) =>{console.log(data)}).catch ( err => {
+    console.log(err)
+})
