@@ -86,3 +86,22 @@ const promesa = new Promise ((resolve, reject) => {
 promesa.then((data) =>{console.log(data)}).catch ( err => {
     console.log(err)
 })
+
+/// PROMESAS ASINCRONAS 
+/* 
+Is a function declared with the async keyword, and the
+await keyword is permitted within it.
+The async and await keywords enable asynchronous,
+promise-based behavior to be written in a cleaner style,
+avoiding the need to explicitly configure promise chains.
+
+sincronia = secuencial
+await = asincrona = espere que traiga la respuesta para seguir trabajando
+
+switch - un caso para cada vez
+
+
+*/
+
+
+
