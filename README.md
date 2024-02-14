@@ -1,3 +1,9 @@
 # HOMEWORK
 Actividades de datos y estructuras 2
-que pasó?
+
+Clase 3
+
+repasar js
+promesas
+importar y exportar
+
