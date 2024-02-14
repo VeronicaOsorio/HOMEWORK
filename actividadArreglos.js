@@ -4,23 +4,18 @@
 const arreglo1 = [0, 1, 2, 3];
 const arreglo2 = [4, 5, 6, 7];
 
-// Concatenar 
 const arregloConcat = arreglo1.concat(arreglo2);
 console.log("Concatenar:", arregloConcat);
 
-// Encontrar el último elemento que cumple con la condición
 const arregloLast = arreglo1.findLast(x => x < 3);
 console.log("Encontrar el último elemento menor a 3:", arregloLast);
 
-// Verificar si todos los elementos son menores a 6
 const arregloEvery = arreglo2.every(x => x < 6);
 console.log("Todos los elementos son menores a 6:", arregloEvery);
 
-// Agregar un elemento al final del arreglo
 arreglo1.push(10);
 console.log("Agregar 10 al final del arreglo:", arreglo1);
 
-// Eliminar el último elemento del arreglo
 const arregloPop = arreglo1.pop();
 console.log("Eliminar el último elemento del arreglo:", arregloPop);
 console.log("arreglo después de eliminar el último elemento:", arreglo1);
