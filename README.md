@@ -4,6 +4,6 @@ Actividades de datos y estructuras 2
 Clase 3
 
 repasar js
-promesas
+promesas (reject y resolve)
 importar y exportar
 
