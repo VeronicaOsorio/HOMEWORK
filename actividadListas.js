@@ -1,20 +1,20 @@
 
 // actividad LISTAS
 
-class Node {
+class Node { //acá creo los nodos
     constructor(value, next = null) {
       this.value = value;
       this.next = next;
     }
   }
   
-  class LinkedList {
-    constructor() {
+  class LinkedList { // creo la lista anidada
+    constructor() { //apunto a la cabeza y a la cola
       this.head = null;
       this.tail = null;
     }
   
-    append(todo) {
+    append(todo) { //agregando nodos
       const newNode = new Node(todo);
   
       if (!this.head) {
@@ -42,40 +42,40 @@ class Node {
     }
   }
   
-  //Actividades
-  const todo0 = {
+  //Actividades, las defino con constantes
+  const tarea0 = {
     title: "Pensar que comer",
     description: "elegir que comer hoy",
   };
-  const todo1 = {
+  const tarea1 = {
     title: "Conseguir comida",
     description: "Ir a la tienda",
   };
   
-  const todo2 = {
+  const tarea2 = {
     title: "preparar comida",
     description: "picar y cocinar los ingredientes",
   };
   
-  const todo3 = {
+  const tarea3 = {
     title: "servir la comida",
     description: "Usar un plato y servir",
   };
 
-  const todo4 = {
+  const tarea4 = {
     title: "comer",
     description: "Comerme la comida",
   };
   
-  // Create a new linked list
+  // todoList se hace una lista anidada
   const todoList = new LinkedList();
   
   // Append the TODOs to the list
-  todoList.append(todo0);
-  todoList.append(todo1);
-  todoList.append(todo2);
-  todoList.append(todo3);
-  todoList.append(todo4);
+  todoList.append(tarea0);
+  todoList.append(tarea1);
+  todoList.append(tarea2);
+  todoList.append(tarea3);
+  todoList.append(tarea4);
   
   // Print all the TODOs
   todoList.print();
