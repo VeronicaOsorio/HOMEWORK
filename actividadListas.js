@@ -64,19 +64,19 @@ class Node { //acá creo los nodos
 
   const tarea4 = {
     title: "comer",
-    description: "Comerme la comida",
+    description: " Comer la comida",
   };
   
   // todoList se hace una lista anidada
   const todoList = new LinkedList();
   
-  // Append the TODOs to the list
+  // agrego las tareas a la lista
   todoList.append(tarea0);
   todoList.append(tarea1);
   todoList.append(tarea2);
   todoList.append(tarea3);
   todoList.append(tarea4);
   
-  // Print all the TODOs
+  // imprimir
   todoList.print();
   
