@@ -48,4 +48,7 @@ queue.enqueue(Cajero2);
 queue.enqueue(Cajero3);
 
 console.log(queue);
-queue.print();
+queue.print()
+
+
+
