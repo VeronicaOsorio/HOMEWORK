@@ -1,113 +1,80 @@
-/*
-Create and handle new list of TODOs.
-Every task must have its title, description,
-and points to next TODO.
-Fill the list with some data and print all
-TODOs
-*/
+// actividad LISTAS
 
-class Node {
-    constructor(value, next = null) {
-      this.value = value;
-      this.next = next;
+class Node { //acá creo los nodos
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
+class LinkedList { // creo la lista anidada
+  constructor() { //apunto a la cabeza y a la cola
+    this.head = null;
+    this.tail = null;
+  }
+
+  append(todo) { //agregando nodos
+    const newNode = new Node(todo);
+
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      this.tail.next = newNode;
+    }
+
+    this.tail = newNode;
+  }
+
+  print() {
+    let current = this.head;
+    while (current) {
+      console.log(`Tarea: ${current.value.title}`);
+      console.log(`Descripción: ${current.value.description}`);
+      if (current.next) {
+        console.log(`Siguiente tarea: ${current.next.value.title}`);
+      } else {
+        console.log("No hay tareas");
+      }
+      console.log("////*//////");
+      current = current.next;
     }
   }
-  
-  class LinkedList {
-    constructor() {
-      this.head = null;
-      this.tail = null;
-    }
-  
-    append(node) {
-      const newNode = new Node(node);
-  
-      if (!this.head) {
-        this.head = newNode;
-      } else {
-        this.tail.next = newNode;
-      }
-  
-      this.tail = newNode;
-    }
-  
-    peek(value, current = this.head) {
-      if (this.head === null) {
-        this.head = new Node(value);
-      } else {
-        this.tail.next = new Node(value);
-      }
-    }
-  
-    size(current = this.head, acum = 0) {
-      while (current) {
-        acum++;
-        current = current.next;
-      }
-      return acum;
-    }
-  
-    remove(value, current = this.head) {
-      let prev = null;
-  
-      while (current !== null) {
-        if (current.value === value) {
-          if (prev === null) {
-            this.head = current.next;
-          } else {
-            prev.next = current.next;
-            if (current.next === null) {
-              this.tail = prev;
-            }
-          }
-          return true;
-        }
-        prev = current;
-        current = current.next;
-      }
-      return false;
-    }
-  
-    print() {
-      let current = this.head;
-      while (current) {
-        console.log(`Title: ${current.value.title}`);
-        console.log(`Description: ${current.value.description}`);
-        if (current.next) {
-          console.log(`Next TODO: ${current.next.value.title}`);
-        } else {
-          console.log("No more TODOs");
-        }
-        console.log("------------");
-        current = current.next;
-      }
-    }
-  }
-  
-  // Define a sample TODO object
-  const todo1 = {
-    title: "Task 1",
-    description: "Description for Task 1",
-  };
-  
-  const todo2 = {
-    title: "Task 2",
-    description: "Description for Task 2",
-  };
-  
-  const todo3 = {
-    title: "Task 3",
-    description: "Description for Task 3",
-  };
-  
-  // Create a new linked list
-  const todoList = new LinkedList();
-  
-  // Append the TODOs to the list
-  todoList.append(todo1);
-  todoList.append(todo2);
-  todoList.append(todo3);
-  
-  // Print all the TODOs
-  todoList.print();
-  
+}
+
+//Actividades, las defino con constantes
+const tarea0 = {
+  title: "Pensar que comer",
+  description: "elegir que comer hoy",
+};
+const tarea1 = {
+  title: "Conseguir comida",
+  description: "Ir a la tienda",
+};
+
+const tarea2 = {
+  title: "preparar comida",
+  description: "picar y cocinar los ingredientes",
+};
+
+const tarea3 = {
+  title: "servir la comida",
+  description: "Usar un plato y servir",
+};
+
+const tarea4 = {
+  title: "comer",
+  description: " Comer la comida",
+};
+
+// todoList se hace una lista anidada
+const todoList = new LinkedList();
+
+// agrego las tareas a la lista
+todoList.append(tarea0);
+todoList.append(tarea1);
+todoList.append(tarea2);
+todoList.append(tarea3);
+todoList.append(tarea4);
+
+// imprimir
+todoList.print();
