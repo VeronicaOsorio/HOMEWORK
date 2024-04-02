@@ -71,14 +71,12 @@ class TreeNode {
   }
   
   // Create a sample family tree
-  const familyTree = new FamilyTree({ fullName: "Fanny Fernandez Rojas", birthdate: "1950-08-22" });
+  const familyTree = new FamilyTree({ fullName: "Claudia Osorio", birthdate: "1984-02-22" });
   
   // Add children
-  familyTree.addChild("Fanny Fernandez Rojas", "Jasmir Fernandez Rojas", "1969-03-01");
-  familyTree.addChild("Fanny Fernandez Rojas", "Cristian Fernandez Rojas", "1976-07-20");
-  familyTree.addChild("Jasmir Fernandez Rojas", "Jorge Cortes Fernandez", "1998-12-29");
-  familyTree.addChild("Jasmir Fernandez Rojas", "Angelica Cortes Fernandez", "1994-03-17");
-  
+  familyTree.addChild( "Claudia Osorio", "Verónica Osorio", "2004-01-13");
+  familyTree.addChild( "Claudia Osorio", "Luisa ramirez", "2009-10-15");
+ 
   // Print the family tree using different traversals
   console.log("Pre-order Traversal:");
   familyTree.preOrderTraversal();
