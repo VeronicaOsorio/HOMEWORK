@@ -1,30 +1,14 @@
 
-
-import CategorieInput from "./components/CategorieInput";
-import AddCategories from "./components/AddCategories";
-import { useState } from "react"; 
 import "./index.css"
 import "./App.css"
-import GiftGrid from "./components/GiftGrid";
-
+import Counter from "./components/counter"
 
 
 function App () {
 
-    const [categories, setCategories] = useState([])
-    const [NewCategory, setNewCategory] = useState("")	
-    
-    const handleChange = (value) => {
-        setNewCategory(value);
-    }
-    const handleClick = () => {
-        setCategories([...categories, NewCategory])
-    }
     return (
         <>
-            <CategorieInput handleChange = {handleChange}/>
-            <AddCategories handleClick = {handleClick}/>
-            {categories.map(category => <GiftGrid category={category}/>)}   
+            <Counter title="Contador" initialCounter={0} />
         </>
     )
 }
