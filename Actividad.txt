@@ -56,7 +56,7 @@ each title
 8. Send by props, each category data to GifItem
 
 
-CHALLENGE
+CHALLENGE 8 
 1. Create a new customHook
 called useCounter
 2. Implement followed methods to
@@ -67,7 +67,7 @@ handle counter:
 3. Use above hook into your
 current component
 
-CHALLENGE
+CHALLENGE 9
 1. Create a new customHook
 called useFetch
 2. Implements fetch api which
