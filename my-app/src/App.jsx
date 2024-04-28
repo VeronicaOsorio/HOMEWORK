@@ -1,13 +1,12 @@
-import './App.css'
+import FirstApp from ".\FirstApp.jsx" 
 
-import {firstApp} from './firstApp'
-
-const App = () => {
-    return(
+function App () {
+    return (
         <>
-    <firstApp></firstApp>
-    </>
-)
+            <FirstApp title = "Second App"/>
+        </>
+    )
 }
 
 export default App
+
