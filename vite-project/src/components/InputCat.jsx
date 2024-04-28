@@ -1,7 +1,7 @@
 
 const InputCat = ({handleChange}) => {
     return (
-    <input type="text" placeholder="Categorie" onChange={(e) => handleChange(e.target.value)} /> 
+    <input type="text" placeholder="Categories" onChange={(e) => handleChange(e.target.value)} /> 
     )
   }
   
