@@ -1,13 +1,10 @@
-import './App.css'
-
-import {firstApp} from './firstApp'
-
-const App = () => {
-    return(
+function App () {
+    return (
         <>
-    <firstApp></firstApp>
-    </>
-)
+            <h1>hola mundo</h1>
+            <h2>Bienvenido</h2>
+        </>
+    )
 }
 
 export default App

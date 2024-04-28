@@ -1,10 +1,14 @@
-import React from "react";
-import ReatDOM from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import FirstApp from './firstApp.jsx'
+import './index.css'
+import './App.css'
 
-import App from "./App";
 
-ReatDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+    <FirstApp />
+  </React.StrictMode>,
 )
