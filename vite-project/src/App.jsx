@@ -1,8 +1,7 @@
-import CompApp from "./CompApp";
-import InputCat from "./InputCat";
-import AddCategories from "./AddCategories";
+import {CompApp} from "./components/CompApp";
+import {InputCat} from "./components/InputCat";
+import {AddCategories} from "./components/AddCategories";
 import { useState } from "react"; 
-
 
 
 function App () {
