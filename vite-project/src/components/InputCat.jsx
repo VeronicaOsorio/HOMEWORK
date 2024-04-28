@@ -1,8 +1,8 @@
 
-const CategorieInput = ({handleChange}) => {
+const InputCat = ({handleChange}) => {
     return (
     <input type="text" placeholder="Categorie" onChange={(e) => handleChange(e.target.value)} /> 
     )
   }
   
-  export default CategorieInput
+  export default InputCat
