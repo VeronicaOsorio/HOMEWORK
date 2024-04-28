@@ -1,22 +1,17 @@
-import CompApp from "./CompApp";
-import InputCat from "./InputCat";
-import AddCategories from "./AddCategories";
+
+
+import CategorieInput from "./components/CategorieInput";
+import AddCategories from "./components/AddCategories";
 import { useState } from "react"; 
+import "./index.css"
+import "./App.css"
+import GiftGrid from "./components/GiftGrid";
 
 
 
 function App () {
 
-    const [categories, setCategories] = useState([
-        "ROMANCE",
-        "SUSPENSO",
-        "TERROR",
-        "ACCION",
-        "FICCION",
-        "DRAMA",
-        "FANTASIA",
-        
-    ])
+    const [categories, setCategories] = useState([])
     const [NewCategory, setNewCategory] = useState("")	
     
     const handleChange = (value) => {
@@ -27,10 +22,11 @@ function App () {
     }
     return (
         <>
-            <CompApp items = {categories}/>
-            <InputCat handleChange = {handleChange}/>
+            <CategorieInput handleChange = {handleChange}/>
             <AddCategories handleClick = {handleClick}/>
+            {categories.map(category => <GiftGrid category={category}/>)}   
         </>
     )
 }
+
 export default App
