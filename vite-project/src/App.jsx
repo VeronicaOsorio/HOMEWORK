@@ -1,32 +1,59 @@
+mport React from 'react';
+import { useDispatch, useSelector, Provider } from 'react-redux';
+import { createStore } from 'redux';
 
+// Define your initial state and reducer
+const initialState = { count: 0 };
 
-import CategorieInput from "./components/CategorieInput";
-import AddCategories from "./components/AddCategories";
-import { useState } from "react"; 
-import "./index.css"
-import "./App.css"
-import GiftGrid from "./components/GiftGrid";
-
-
-
-function App () {
-
-    const [categories, setCategories] = useState([])
-    const [NewCategory, setNewCategory] = useState("")	
-    
-    const handleChange = (value) => {
-        setNewCategory(value);
-    }
-    const handleClick = () => {
-        setCategories([...categories, NewCategory])
-    }
-    return (
-        <>
-            <CategorieInput handleChange = {handleChange}/>
-            <AddCategories handleClick = {handleClick}/>
-            {categories.map(category => <GiftGrid category={category}/>)}   
-        </>
-    )
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    case 'INCREMENT_BY':
+      return { count: state.count + action.payload };
+    default:
+      return state;
+  }
 }
 
-export default App
+// Create the Redux store
+const store = createStore(reducer);
+
+const handleIncrement = () => {
+  store.dispatch({ type: 'INCREMENT' });
+};
+
+const handleDecrement = () => {
+  store.dispatch({ type: 'DECREMENT' });
+};
+
+const handleIncrementBy = (value) => {
+  store.dispatch({ type: 'INCREMENT_BY', payload: value });
+};
+
+function App() {
+  const count = useSelector((state) => state.count);
+
+  return (
+    <>
+      <div className="card">
+        <button onClick={handleIncrement}>Increment</button>
+        <button onClick={handleDecrement}>Decrement</button>
+        <button onClick={() => handleIncrementBy(5)}>Increment by 5</button>
+        <p>count is {count}</p>
+      </div>
+    </>
+  );
+}
+
+function ReduxApp() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+}
+
+export default ReduxApp;
